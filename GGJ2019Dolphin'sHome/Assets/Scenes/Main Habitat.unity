@@ -346,10 +346,11 @@ MonoBehaviour:
   scalar_velocity: {x: 0, y: 0, z: 0}
   z_angle: 0
   pivot: {x: 0, y: 0, z: 1}
-  rotational_speed: 7.5
+  rotational_speed: 2
   directional_speed: {x: 1, y: 0, z: 0}
   true_speed: {x: 0, y: 0, z: 0}
   force_acting_in_dolphin: {x: 0, y: 0, z: 0}
+  inertial_limit: 1
 --- !u!1 &737109721
 GameObject:
   m_ObjectHideFlags: 0
