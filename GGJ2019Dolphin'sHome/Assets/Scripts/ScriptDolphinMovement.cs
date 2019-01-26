@@ -95,7 +95,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void AccelerateDolphinForward(Vector3 directional_speed)
     {
-        Vector3 final_directional_speed = MoveDolphin(directional_speed);
+        Vector3 final_directional_speed = GetFinalDirectionalSpeed(directional_speed);
 
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
@@ -119,14 +119,14 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void MoveDolphinForward(Vector3 directional_speed)
     {
-        Vector3 final_directional_speed = MoveDolphin(directional_speed);
+        Vector3 final_directional_speed = GetFinalDirectionalSpeed(directional_speed);
 
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
         rigidbody.velocity = final_directional_speed;
     }
 
-    private Vector3 MoveDolphin(Vector3 directional_speed)
+    private Vector3 GetFinalDirectionalSpeed(Vector3 directional_speed)
     {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
@@ -143,8 +143,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
     {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.angularVelocity = Vector3.zero;
+        AccelerateDolphinForward(-directional_speed);
     }
 
     private void InertialForcesWorkingInTheDolphin()
@@ -159,10 +158,11 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         if (dolphin_true_speed > maximum_speed)
         {
+            Debug.Log("HEY!");
             StopDolphinImmediately();
 
             Vector3 maximum_speed_vector = new Vector3(dolphin_true_speed, 0f, 0f);
-            MoveDolphin(maximum_speed_vector);
+            MoveDolphinForward(maximum_speed_vector);
         }
     }
 
