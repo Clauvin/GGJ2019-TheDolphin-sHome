@@ -26,6 +26,11 @@ public class ScriptDolphinStomach : MonoBehaviour {
         if (how_much_filled >= max_stomach_limit) how_much_filled = max_stomach_limit;
     }
 
+    public void AvoidABrokenStomach()
+    {
+        if (how_much_filled < min_stomach_limit) how_much_filled = min_stomach_limit;
+    }
+
     // Use this for initialization
     void Start () {
 		
@@ -33,6 +38,7 @@ public class ScriptDolphinStomach : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        AvoidABrokenStomach();
+
+    }
 }
