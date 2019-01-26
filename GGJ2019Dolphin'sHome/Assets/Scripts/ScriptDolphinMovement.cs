@@ -74,7 +74,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
         Vector3 final_directional_speed = directional_speed;
-        float rad_angle = z_angle;
+        float rad_angle = z_angle * Mathf.Deg2Rad;
 
         Debug.Log("1 - " + Mathf.Cos(rad_angle));
         Debug.Log("2 - " + Mathf.Sin(rad_angle));
@@ -102,6 +102,5 @@ public class ScriptDolphinMovement : MonoBehaviour {
     {
         z_angle = root_player.transform.eulerAngles.z;
         true_speed = root_player.GetComponent<Rigidbody>().velocity;
-
     }
 }
