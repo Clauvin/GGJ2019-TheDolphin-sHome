@@ -32,6 +32,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
         ControlDolphin();
 
         InertialForcesWorkingInTheDolphin();
+
+        
     }
 
     private void ControlDolphin()
@@ -70,7 +72,16 @@ public class ScriptDolphinMovement : MonoBehaviour {
     {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
-        rigidbody.AddForce(directional_speed * ScriptGlobalVariables.game_speed);
+        Vector3 final_directional_speed = directional_speed;
+        float rad_angle = Mathf.Deg2Rad * z_angle;
+
+        Debug.Log("1 - " + Mathf.Cos(rad_angle));
+        Debug.Log("2 - " + Mathf.Sin(rad_angle));
+
+        final_directional_speed.x = directional_speed.x * Mathf.Cos(rad_angle);
+        final_directional_speed.y = directional_speed.y * Mathf.Sin(rad_angle);
+
+        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed);
     }
 
     private void InertialForcesWorkingInTheDolphin()
