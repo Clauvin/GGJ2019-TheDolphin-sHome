@@ -16,9 +16,6 @@ public class ScriptDolphinMovement : MonoBehaviour {
     {
         root_player = GameObject.FindGameObjectWithTag("Player");
         z_angle = root_player.transform.rotation.z;
-
-        BoxCollider box_collider = root_player.GetComponentInChildren<BoxCollider>();
-        pivot = box_collider.center;
     }
 
     // Use this for initialization
@@ -28,8 +25,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        ControlDolphin();
+    }
 
     private void ControlDolphin()
     {
@@ -38,9 +35,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
         float vertical_axis = Input.GetAxis("Vertical");
 
         if ((horizontal_axis < 0) || (horizontal_axis > 0)) {
-
-            if (horizontal_axis < 0) RotateDolphin(-rotational_speed);
-            else if (horizontal_axis > 0) RotateDolphin(rotational_speed);
+            if (horizontal_axis < 0) RotateDolphin(rotational_speed);
+            else if (horizontal_axis > 0) RotateDolphin(-rotational_speed);
 
         }
 
@@ -55,6 +51,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void RotateDolphin(float rotation_in_degrees)
     {
-        root_player.transform.Rotate(pivot, rotation_in_degrees);
+        Vector3 rotation_to_be_applied = new Vector3(0, 0, rotation_in_degrees);
+        root_player.transform.Rotate(pivot, rotation_in_degrees, Space.World);
     }
 }
