@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptWaterAttributes : ScriptFluidAttributes {
+public class ScriptAirAttributes : ScriptFluidAttributes {
 
-	// Use this for initialization
+    // Use this for initialization
 	void Start () {
 		
 	}

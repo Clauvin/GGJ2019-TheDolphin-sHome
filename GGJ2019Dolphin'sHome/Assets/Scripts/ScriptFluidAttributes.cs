@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptWaterAttributes : ScriptFluidAttributes {
+public class ScriptFluidAttributes : MonoBehaviour {
+
+    public float friction;
 
 	// Use this for initialization
 	void Start () {
