@@ -52,7 +52,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
         if ((vertical_axis < 0) || (vertical_axis > 0))
         {
             if (vertical_axis < 0) ;
-            else if (vertical_axis > 0) MoveDolphinForward(directional_speed);
+            else if (vertical_axis > 0) AccelerateDolphinForward(directional_speed);
 
 
         }
@@ -67,9 +67,43 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         Vector3 rotation_to_be_applied = new Vector3(0, 0, rotation_in_degrees);
         root_player.transform.Rotate(pivot, final_rotation_speed, Space.World);
+
+        UpdateValues();
+
+        TransferSpeed();
+    }
+
+    private void TransferSpeed()
+    {
+        float scalar_value = GetOriginalXValue(true_speed.x, rotational_speed * Mathf.Deg2Rad);
+
+        MoveDolphinForward(new Vector3(scalar_value, 0.0f, 0.0f));
+    }
+
+    private float GetOriginalXValue(float x_value, float rad_x_angle)
+    {
+        return x_value * (1.0f / Mathf.Cos(rad_x_angle));
+    }
+
+    private void AccelerateDolphinForward(Vector3 directional_speed)
+    {
+        Vector3 final_directional_speed = MoveDolphin(directional_speed);
+
+        Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+
+        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed);
     }
 
     private void MoveDolphinForward(Vector3 directional_speed)
+    {
+        Vector3 final_directional_speed = MoveDolphin(directional_speed);
+
+        Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+
+        rigidbody.velocity = final_directional_speed;
+    }
+
+    private Vector3 MoveDolphin(Vector3 directional_speed)
     {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
@@ -82,7 +116,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
         final_directional_speed.x = ScriptGlobalVariables.game_speed * directional_speed.x * Mathf.Cos(rad_angle);
         final_directional_speed.y = ScriptGlobalVariables.game_speed * directional_speed.x * Mathf.Sin(rad_angle);
 
-        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed);
+        return final_directional_speed;
     }
 
     private void StopDolphinImmediately()
