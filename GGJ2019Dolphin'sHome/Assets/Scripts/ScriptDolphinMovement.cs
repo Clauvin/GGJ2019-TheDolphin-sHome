@@ -18,7 +18,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
     public Vector3 force_acting_in_dolphin;
 
     public float inertial_limit;
-    
+
+    public bool is_in_water = false;
 
     private void Awake()
     {
@@ -149,6 +150,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
     private void InertialForcesWorkingInTheDolphin()
     {
         LimitDolphinSpeed();
+
+        ApplyWaterFriction();
     }
 
     private void LimitDolphinSpeed()
@@ -163,6 +166,16 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
             Vector3 maximum_speed_vector = new Vector3(dolphin_true_speed, 0f, 0f);
             MoveDolphinForward(maximum_speed_vector);
+        }
+    }
+
+    private void ApplyWaterFriction()
+    {
+        float dolphin_true_speed = GetOriginalXValue(true_speed);
+        float vertical_axis = Input.GetAxis("Vertical");
+        float water_friction = ScriptGlobalVariables.water.GetComponent<ScriptWaterAttributes>().water_friction;
+        if ((dolphin_true_speed > 0) && (vertical_axis <= 0)){
+            AccelerateDolphinForward(-directional_speed * water_friction);
         }
     }
 
