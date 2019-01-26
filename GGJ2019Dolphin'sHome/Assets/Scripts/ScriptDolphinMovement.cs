@@ -14,7 +14,10 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     public Vector3 directional_speed;
     public Vector3 true_speed;
+    public float maximum_speed;
     public Vector3 force_acting_in_dolphin;
+
+    public float inertial_limit;
     
 
     private void Awake()
@@ -31,6 +34,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ControlDolphin();
+
+        UpdateValues();
 
         InertialForcesWorkingInTheDolphin();
 
@@ -51,10 +56,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         if ((vertical_axis < 0) || (vertical_axis > 0))
         {
-            if (vertical_axis < 0) ;
+            if (vertical_axis < 0) BreakingDolphingSpeed();
             else if (vertical_axis > 0) AccelerateDolphinForward(directional_speed);
-
-
         }
 
 
@@ -99,6 +102,21 @@ public class ScriptDolphinMovement : MonoBehaviour {
         rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed);
     }
 
+    private void BreakingDolphingSpeed()
+    {
+        float x = GetOriginalXValue(true_speed);
+
+        if (x < inertial_limit)
+        {
+            Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+        } else
+        {
+            AccelerateDolphinForward(-directional_speed * 2 * ScriptGlobalVariables.game_speed);
+        }
+    }
+
     private void MoveDolphinForward(Vector3 directional_speed)
     {
         Vector3 final_directional_speed = MoveDolphin(directional_speed);
@@ -131,7 +149,21 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void InertialForcesWorkingInTheDolphin()
     {
+        LimitDolphinSpeed();
+    }
 
+    private void LimitDolphinSpeed()
+    {
+        float dolphin_true_speed = GetOriginalXValue(true_speed);
+        Debug.Log("SHOW TRUE SPEED! =" + dolphin_true_speed);
+
+        if (dolphin_true_speed > maximum_speed)
+        {
+            StopDolphinImmediately();
+
+            Vector3 maximum_speed_vector = new Vector3(dolphin_true_speed, 0f, 0f);
+            MoveDolphin(maximum_speed_vector);
+        }
     }
 
     private void UpdateValues()
