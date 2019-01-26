@@ -51,9 +51,6 @@ public class ScriptFluidAttributes : MonoBehaviour {
         if (coeficient_final > 1) coeficient_original = 1;
 
         Color cor_de_transicao = coeficient_original * cor_original + coeficient_final * cor_final;
-        Debug.Log("Cor_original " + cor_original);
-        Debug.Log("Cor final " + cor_final);
-        Debug.Log("Cor de transição " + cor_de_transicao);
 
         GetComponent<MeshRenderer>().material.SetColor("_Color", cor_de_transicao);
     }

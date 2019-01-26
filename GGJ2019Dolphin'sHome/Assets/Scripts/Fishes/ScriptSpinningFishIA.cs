@@ -93,7 +93,6 @@ public class ScriptSpinningFishIA : MonoBehaviour {
     void CountingTime()
     {
         counter += Time.deltaTime;
-        Debug.Log("Counter " + counter);
     }
 
     void TimeToChangeState()
