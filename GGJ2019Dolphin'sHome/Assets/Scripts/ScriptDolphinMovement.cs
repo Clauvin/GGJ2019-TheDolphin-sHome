@@ -147,6 +147,13 @@ public class ScriptDolphinMovement : MonoBehaviour {
         AccelerateDolphinForward(-directional_speed);
     }
 
+    private void StopDolphinCalmly()
+    {
+        Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
+    }
+
     private void InertialForcesWorkingInTheDolphin()
     {
         LimitDolphinSpeed();
@@ -165,7 +172,6 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         if (dolphin_true_speed > maximum_speed)
         {
-            Debug.Log("HEY!");
             StopDolphinImmediately();
 
             Vector3 maximum_speed_vector = new Vector3(dolphin_true_speed, 0f, 0f);
@@ -187,10 +193,11 @@ public class ScriptDolphinMovement : MonoBehaviour {
     private void ApplyInertialLimitEffect()
     {
         float x = GetOriginalXValue(true_speed);
+        float vertical_axis = Input.GetAxis("Vertical");
 
-        if (x < inertial_limit)
+        if ((x < inertial_limit) && (vertical_axis <= 0))
         {
-            StopDolphinImmediately();
+            StopDolphinCalmly();
         }
     }
 
