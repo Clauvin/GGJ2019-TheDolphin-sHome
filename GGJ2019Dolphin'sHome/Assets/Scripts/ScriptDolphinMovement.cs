@@ -75,14 +75,19 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void TransferSpeed()
     {
-        float scalar_value = GetOriginalXValue(true_speed.x, rotational_speed * Mathf.Deg2Rad);
+        float scalar_value = GetOriginalXValue(true_speed);
 
         MoveDolphinForward(new Vector3(scalar_value, 0.0f, 0.0f));
     }
 
-    private float GetOriginalXValue(float x_value, float rad_x_angle)
+    private float GetOriginalXValue(Vector3 true_speed)
     {
-        return x_value * (1.0f / Mathf.Cos(rad_x_angle));
+        float x = true_speed.x;
+        float y = true_speed.y;
+
+        float hip = Mathf.Sqrt(Mathf.Pow(x,2) + Mathf.Pow(y, 2));
+
+        return hip;
     }
 
     private void AccelerateDolphinForward(Vector3 directional_speed)
@@ -109,9 +114,6 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         Vector3 final_directional_speed = directional_speed;
         float rad_angle = z_angle * Mathf.Deg2Rad;
-
-        Debug.Log("1 - " + Mathf.Cos(rad_angle));
-        Debug.Log("2 - " + Mathf.Sin(rad_angle));
 
         final_directional_speed.x = ScriptGlobalVariables.game_speed * directional_speed.x * Mathf.Cos(rad_angle);
         final_directional_speed.y = ScriptGlobalVariables.game_speed * directional_speed.x * Mathf.Sin(rad_angle);
