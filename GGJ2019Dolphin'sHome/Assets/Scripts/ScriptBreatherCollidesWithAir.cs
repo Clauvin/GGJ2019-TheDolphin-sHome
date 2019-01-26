@@ -4,8 +4,25 @@ using UnityEngine;
 
 public class ScriptBreatherCollidesWithAir : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<TagAir>())
+        {
+            ScriptDolphinStamina dolphin_stamina = ScriptGlobalVariables.player.GetComponentInChildren<ScriptDolphinStamina>();
+
+            dolphin_stamina.FullStaminaRecover();
+        }
+        else if (other.GetComponent<TagDirtyAir>())
+        {
+            ScriptDolphinStamina dolphin_stamina = ScriptGlobalVariables.player.GetComponentInChildren<ScriptDolphinStamina>();
+
+            dolphin_stamina.PartialStaminaRecover();
+        }
+    }
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

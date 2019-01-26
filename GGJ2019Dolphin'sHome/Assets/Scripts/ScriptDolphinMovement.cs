@@ -182,7 +182,10 @@ public class ScriptDolphinMovement : MonoBehaviour {
     {
         float dolphin_true_speed = GetOriginalXValue(true_speed);
         float vertical_axis = Input.GetAxis("Vertical");
-        float friction = ScriptGlobalVariables.water.GetComponent<ScriptFluidAttributes>().friction;
+
+        GameObject w = ScriptGlobalVariables.water;
+        float friction = w.GetComponent<ScriptWaterAttributes>().friction;
+
         if ((dolphin_true_speed > inertial_limit) && (vertical_axis <= 0)){
             AccelerateDolphinForward(-directional_speed * friction *
                 ScriptGlobalVariables.game_speed);
