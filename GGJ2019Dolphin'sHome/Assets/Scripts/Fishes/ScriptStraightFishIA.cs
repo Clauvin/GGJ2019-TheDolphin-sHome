@@ -107,8 +107,6 @@ public class ScriptStraightFishIA : MonoBehaviour {
 
     void Spin30DegreesAndMove()
     {
-        Debug.Log("Z angle " + movement.z_angle);
-        Debug.Log("Change 30 " + change_30_angle);
         if (!Mathf.Approximately(movement.z_angle, change_30_angle))
         {
             movement.RotateDolphin(movement.rotational_speed);
@@ -122,7 +120,6 @@ public class ScriptStraightFishIA : MonoBehaviour {
     void CountingTime()
     {
         counter += Time.deltaTime;
-        Debug.Log("Counter " + counter);
     }
 
     void TimeToChangeState()
