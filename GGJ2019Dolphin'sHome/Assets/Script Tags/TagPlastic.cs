@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptPlayMusic : MonoBehaviour {
+public class TagPlastic : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GetComponent<AudioSource>().Play();
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 }

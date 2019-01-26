@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 65895180703727070}
   - component: {fileID: 114634708696840066}
   - component: {fileID: 114098144329077164}
+  - component: {fileID: 114952640533628688}
+  - component: {fileID: 114108268460768322}
   - component: {fileID: 65613318128673610}
   m_Layer: 0
   m_Name: Main Collision Box
@@ -286,6 +288,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f55b69154d3e54997bfc910831a810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114108268460768322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654064538760986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe5c596992615e4998c923a808744ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114191355189094486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,3 +373,14 @@ MonoBehaviour:
   min_stomach_limit: 0
   how_much_filled: 0
   max_stomach_limit: 100
+--- !u!114 &114952640533628688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654064538760986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dec78076e30cf440823e73b1028cf33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
