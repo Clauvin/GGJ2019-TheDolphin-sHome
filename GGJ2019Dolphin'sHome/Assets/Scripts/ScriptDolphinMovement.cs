@@ -109,9 +109,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         if (x < inertial_limit)
         {
-            Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
-            rigidbody.velocity = Vector3.zero;
-            rigidbody.angularVelocity = Vector3.zero;
+            StopDolphinImmediately();
         } else
         {
             AccelerateDolphinForward(-directional_speed * 2 * ScriptGlobalVariables.game_speed);
@@ -143,6 +141,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
     private void StopDolphinImmediately()
     {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
 
         AccelerateDolphinForward(-directional_speed);
     }
@@ -152,6 +152,10 @@ public class ScriptDolphinMovement : MonoBehaviour {
         LimitDolphinSpeed();
 
         ApplyWaterFriction();
+
+        UpdateValues();
+
+        ApplyInertialLimitEffect();
     }
 
     private void LimitDolphinSpeed()
@@ -174,8 +178,19 @@ public class ScriptDolphinMovement : MonoBehaviour {
         float dolphin_true_speed = GetOriginalXValue(true_speed);
         float vertical_axis = Input.GetAxis("Vertical");
         float water_friction = ScriptGlobalVariables.water.GetComponent<ScriptWaterAttributes>().water_friction;
-        if ((dolphin_true_speed > 0) && (vertical_axis <= 0)){
-            AccelerateDolphinForward(-directional_speed * water_friction);
+        if ((dolphin_true_speed > inertial_limit) && (vertical_axis <= 0)){
+            AccelerateDolphinForward(-directional_speed * water_friction *
+                ScriptGlobalVariables.game_speed);
+        }
+    }
+
+    private void ApplyInertialLimitEffect()
+    {
+        float x = GetOriginalXValue(true_speed);
+
+        if (x < inertial_limit)
+        {
+            StopDolphinImmediately();
         }
     }
 
