@@ -51,7 +51,9 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void RotateDolphin(float rotation_in_degrees)
     {
+        float final_rotation_speed = rotation_in_degrees * ScriptGlobalVariables.game_speed;
+
         Vector3 rotation_to_be_applied = new Vector3(0, 0, rotation_in_degrees);
-        root_player.transform.Rotate(pivot, rotation_in_degrees, Space.World);
+        root_player.transform.Rotate(pivot, final_rotation_speed, Space.World);
     }
 }

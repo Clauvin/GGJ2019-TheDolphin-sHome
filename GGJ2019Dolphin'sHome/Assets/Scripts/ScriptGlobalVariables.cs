@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptGlobalVariables : MonoBehaviour {
+public static class ScriptGlobalVariables{
 
-    public float game_speed = 1.0f;
-    public int which_game_stage = 1;
+    public static float game_speed = 1.0f;
+    public static int which_game_stage = 1;
 
 }
