@@ -24,14 +24,10 @@ public class ScriptSpinningFishMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        UpdateValues();
 
-        InertialForcesWorkingInTheSpinningFish();
-
-        UpdateValues();
     }
 
-    void InertialForcesWorkingInTheSpinningFish()
+    public void InertialForcesWorkingInTheSpinningFish()
     {
         LimitFishSpeed();
 
@@ -39,7 +35,7 @@ public class ScriptSpinningFishMovement : MonoBehaviour {
 
         UpdateValues();
 
-        ApplyInertialLimitEffect();
+        //ApplyInertialLimitEffect();
     }
 
     public void LimitFishSpeed()
@@ -108,12 +104,11 @@ public class ScriptSpinningFishMovement : MonoBehaviour {
     public void ApplyWaterFriction()
     {
         float dolphin_true_speed = GetOriginalXValue(true_speed);
-        float vertical_axis = Input.GetAxis("Vertical");
 
         GameObject w = ScriptGlobalVariables.water;
         float friction = w.GetComponent<ScriptWaterAttributes>().friction;
 
-        if ((dolphin_true_speed > inertial_limit) && (vertical_axis <= 0))
+        if (dolphin_true_speed > inertial_limit)
         {
             AccelerateFishForward(-directional_speed * friction *
                 ScriptGlobalVariables.game_speed);
@@ -125,7 +120,7 @@ public class ScriptSpinningFishMovement : MonoBehaviour {
         float x = GetOriginalXValue(true_speed);
         float vertical_axis = Input.GetAxis("Vertical");
 
-        if ((x < inertial_limit) && (vertical_axis <= 0))
+        if (x < inertial_limit)
         {
             StopDolphinCalmly();
         }

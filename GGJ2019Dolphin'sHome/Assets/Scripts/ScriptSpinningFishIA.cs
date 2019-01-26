@@ -30,9 +30,24 @@ public class ScriptSpinningFishIA : MonoBehaviour {
 	void Update () {
 
         Act();
+        movement.UpdateValues();
+
+        movement.InertialForcesWorkingInTheSpinningFish();
+
+        movement.UpdateValues();
+
         CountingTime();
         TimeToChangeState();
 	}
+
+    void IAList()
+    {
+        Act();
+
+
+        CountingTime();
+        TimeToChangeState();
+    }
 
     void ChangeState()
     {

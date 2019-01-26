@@ -14755,7 +14755,17 @@ Prefab:
     - target: {fileID: 114616231165308712, guid: 1aedf9bf9fdd5964988275157fc25fce,
         type: 2}
       propertyPath: directional_speed.x
-      value: 8
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616231165308712, guid: 1aedf9bf9fdd5964988275157fc25fce,
+        type: 2}
+      propertyPath: maximum_speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165637950997816, guid: 1aedf9bf9fdd5964988275157fc25fce,
+        type: 2}
+      propertyPath: time_to_change_state
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aedf9bf9fdd5964988275157fc25fce, type: 2}
