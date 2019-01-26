@@ -12,6 +12,10 @@ public class ScriptDolphinMovement : MonoBehaviour {
     public Vector3 pivot;
     public float rotational_speed;
 
+    public Vector3 directional_speed;
+    public Vector3 force_acting_in_dolphin;
+    
+
     private void Awake()
     {
         root_player = GameObject.FindGameObjectWithTag("Player");
@@ -26,6 +30,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ControlDolphin();
+
+        InertialForcesWorkingInTheDolphin();
     }
 
     private void ControlDolphin()
@@ -42,6 +48,9 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         if ((vertical_axis < 0) || (vertical_axis > 0))
         {
+            if (vertical_axis < 0) ;
+            else if (vertical_axis > 0) MoveDolphinForward(directional_speed);
+
 
         }
 
@@ -55,5 +64,17 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         Vector3 rotation_to_be_applied = new Vector3(0, 0, rotation_in_degrees);
         root_player.transform.Rotate(pivot, final_rotation_speed, Space.World);
+    }
+
+    private void MoveDolphinForward(Vector3 directional_speed)
+    {
+        Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+
+        rigidbody.AddForce(directional_speed * ScriptGlobalVariables.game_speed);
+    }
+
+    private void InertialForcesWorkingInTheDolphin()
+    {
+
     }
 }
