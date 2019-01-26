@@ -8,7 +8,7 @@ public class ScriptDolphinStomach : MonoBehaviour {
     public float how_much_filled;
     public float max_stomach_limit;
 
-    bool CanEatStuff()
+    public bool CanEatStuff()
     {
         if (how_much_filled == max_stomach_limit)
         {
@@ -20,7 +20,7 @@ public class ScriptDolphinStomach : MonoBehaviour {
         }
     }
 
-    void AteStuff(float nutritional_value)
+    public void AteStuff(float nutritional_value)
     {
         how_much_filled += nutritional_value;
         if (how_much_filled >= max_stomach_limit) how_much_filled = max_stomach_limit;

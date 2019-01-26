@@ -168,7 +168,6 @@ public class ScriptDolphinMovement : MonoBehaviour {
     private void LimitDolphinSpeed()
     {
         float dolphin_true_speed = GetOriginalXValue(true_speed);
-        Debug.Log("SHOW TRUE SPEED! =" + dolphin_true_speed);
 
         if (dolphin_true_speed > maximum_speed)
         {

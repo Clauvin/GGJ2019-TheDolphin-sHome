@@ -734,6 +734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1246483180}
+  - {fileID: 1877701577}
   m_Father: {fileID: 1619140893}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13780,6 +13781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4cf669c9cd0594fb48bb99bfac6813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  min_stamina_value: 0
+  actual_stamina_value: 0
+  max_stamina_value: 0
 --- !u!114 &670204188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13793,7 +13797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min_stomach_limit: 0
   how_much_filled: 0
-  max_stomach_limit: 0
+  max_stomach_limit: 100
 --- !u!1 &675551688
 GameObject:
   m_ObjectHideFlags: 0
@@ -40011,6 +40015,59 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1876463953}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1877701576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877701577}
+  - component: {fileID: 1877701579}
+  - component: {fileID: 1877701578}
+  m_Layer: 0
+  m_Name: Fish Control
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1877701577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877701576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 51246393}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1877701578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877701576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619343acca4858b41972ce4de16400dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish_nutritional_value: 10
+--- !u!114 &1877701579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877701576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464f5583252e2d54d94504a9c752763e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1881744772
 GameObject:
   m_ObjectHideFlags: 0
