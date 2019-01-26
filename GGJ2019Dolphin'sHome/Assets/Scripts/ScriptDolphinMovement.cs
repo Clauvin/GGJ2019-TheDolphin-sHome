@@ -19,7 +19,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
     private void Awake()
     {
         root_player = GameObject.FindGameObjectWithTag("Player");
-        z_angle = root_player.transform.rotation.z;
+        z_angle = root_player.transform.eulerAngles.z;
     }
 
     // Use this for initialization
@@ -33,7 +33,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
         InertialForcesWorkingInTheDolphin();
 
-        
+        UpdateValues();
     }
 
     private void ControlDolphin()
@@ -73,19 +73,26 @@ public class ScriptDolphinMovement : MonoBehaviour {
         Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
 
         Vector3 final_directional_speed = directional_speed;
-        float rad_angle = Mathf.Deg2Rad * z_angle;
+        float rad_angle = z_angle;
 
         Debug.Log("1 - " + Mathf.Cos(rad_angle));
         Debug.Log("2 - " + Mathf.Sin(rad_angle));
 
         final_directional_speed.x = directional_speed.x * Mathf.Cos(rad_angle);
-        final_directional_speed.y = directional_speed.y * Mathf.Sin(rad_angle);
+        final_directional_speed.y = directional_speed.x * Mathf.Sin(rad_angle);
 
-        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed);
+        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed,ForceMode.);
     }
 
     private void InertialForcesWorkingInTheDolphin()
     {
+
+    }
+
+    private void UpdateValues()
+    {
+
+        z_angle = root_player.transform.eulerAngles.z;
 
     }
 }
