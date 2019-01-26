@@ -13,6 +13,7 @@ public class ScriptDolphinMovement : MonoBehaviour {
     public float rotational_speed;
 
     public Vector3 directional_speed;
+    public Vector3 true_speed;
     public Vector3 force_acting_in_dolphin;
     
 
@@ -78,10 +79,18 @@ public class ScriptDolphinMovement : MonoBehaviour {
         Debug.Log("1 - " + Mathf.Cos(rad_angle));
         Debug.Log("2 - " + Mathf.Sin(rad_angle));
 
-        final_directional_speed.x = directional_speed.x * Mathf.Cos(rad_angle);
-        final_directional_speed.y = directional_speed.x * Mathf.Sin(rad_angle);
+        final_directional_speed.x = ScriptGlobalVariables.game_speed * directional_speed.x * Mathf.Cos(rad_angle);
+        final_directional_speed.y = ScriptGlobalVariables.game_speed * directional_speed.x * Mathf.Sin(rad_angle);
 
-        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed,ForceMode.);
+        rigidbody.AddForce(final_directional_speed * ScriptGlobalVariables.game_speed);
+    }
+
+    private void StopDolphinImmediately()
+    {
+        Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
     }
 
     private void InertialForcesWorkingInTheDolphin()
@@ -91,8 +100,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     private void UpdateValues()
     {
-
         z_angle = root_player.transform.eulerAngles.z;
+        true_speed = root_player.GetComponent<Rigidbody>().velocity;
 
     }
 }
