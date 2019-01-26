@@ -174,7 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  time_to_change_state: 0
+  time_to_change_state: 20
+  movement: {fileID: 0}
   estado_do_peixe: 0
 --- !u!114 &114616231165308712
 MonoBehaviour:
@@ -188,13 +189,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   z_angle: 0
-  pivot: {x: 0, y: 0, z: 0}
-  rotational_speed: 0
-  directional_speed: {x: 0, y: 0, z: 0}
+  pivot: {x: 0, y: 0, z: 1}
+  rotational_speed: 4
+  directional_speed: {x: 2, y: 0, z: 0}
   true_speed: {x: 0, y: 0, z: 0}
-  maximum_speed: 0
+  maximum_speed: 12
   force_acting_in_dolphin: {x: 0, y: 0, z: 0}
-  inertial_limit: 0
+  inertial_limit: 1
   is_in_water: 0
 --- !u!114 &114905714407396078
 MonoBehaviour:

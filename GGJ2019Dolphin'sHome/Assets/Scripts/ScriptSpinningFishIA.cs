@@ -21,8 +21,8 @@ public class ScriptSpinningFishIA : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        ChangeState();
         movement = GetComponent<ScriptSpinningFishMovement>();
+        ChangeState();
 
     }
 	
@@ -66,18 +66,19 @@ public class ScriptSpinningFishIA : MonoBehaviour {
     void ActClockwise()
     {
         movement.AccelerateFishForward(movement.directional_speed);
-        movement.RotateDolphin(movement.rotational_speed);
+        movement.RotateDolphin(-movement.rotational_speed);
     }
 
     void ActAntiClockwise()
     {
         movement.AccelerateFishForward(movement.directional_speed);
-        movement.RotateDolphin(-movement.rotational_speed);
+        movement.RotateDolphin(movement.rotational_speed);
     }
 
     void CountingTime()
     {
         counter += Time.deltaTime;
+        Debug.Log("Counter " + counter);
     }
 
     void TimeToChangeState()
