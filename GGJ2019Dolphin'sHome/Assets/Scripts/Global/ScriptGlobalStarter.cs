@@ -6,7 +6,8 @@ public class ScriptGlobalStarter : MonoBehaviour {
 
     void Awake()
     {
-
+        ScriptGlobalVariables.player = GameObject.FindGameObjectWithTag("Player");
+        ScriptGlobalVariables.water = GameObject.FindGameObjectWithTag("Water");
     }
 
     // Use this for initialization
