@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScriptCollidesWithBarrier : MonoBehaviour {
 
     public GameObject[] sons_do_boto;
-    public GameObject communication_image;
+    GameObject communication_image;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,11 +15,13 @@ public class ScriptCollidesWithBarrier : MonoBehaviour {
 
             sons_do_boto[qual_som].GetComponent<AudioSource>().Play();
 
+            communication_image = other.gameObject.GetComponent<ScriptStoreImage>().communication_image;
+
             GameObject imagem = Instantiate(communication_image);
 
             Vector3 posicao = other.gameObject.transform.position;
 
-            posicao.y += 16;
+            posicao.y += 8;
 
             imagem.transform.position = posicao;
         }
