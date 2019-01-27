@@ -21,6 +21,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
 
     public bool is_in_water = false;
 
+    public float stun_time;
+
     public Camera this_camera;
 
     private void Awake()
@@ -46,6 +48,8 @@ public class ScriptDolphinMovement : MonoBehaviour {
         UpdateValues();
 
         CameraStabilization();
+
+        UpdateStun();
     }
 
     private void ControlDolphin()
@@ -53,13 +57,13 @@ public class ScriptDolphinMovement : MonoBehaviour {
         float horizontal_axis = Input.GetAxis("Horizontal");
         float vertical_axis = Input.GetAxis("Vertical");
 
-        if ((horizontal_axis < 0) || (horizontal_axis > 0)) {
+        if (((horizontal_axis < 0) || (horizontal_axis > 0))&& (stun_time <= 0.0f)) {
             if (horizontal_axis < 0) RotateDolphin(rotational_speed);
             else if (horizontal_axis > 0) RotateDolphin(-rotational_speed);
 
         }
 
-        if ((vertical_axis < 0) || (vertical_axis > 0))
+        if ((vertical_axis < 0) || (vertical_axis > 0)) 
         {
             if (vertical_axis < 0) BreakingDolphingSpeed();
             else if (vertical_axis > 0) AccelerateDolphinForward(directional_speed);
@@ -204,10 +208,23 @@ public class ScriptDolphinMovement : MonoBehaviour {
         }
     }
 
+    public void PushDolphin(Vector3 direction)
+    {
+        Rigidbody rigidbody = root_player.GetComponent<Rigidbody>();
+
+        rigidbody.AddForce(direction, ForceMode.Impulse);
+    }
+
     private void UpdateValues()
     {
         z_angle = root_player.transform.eulerAngles.z;
         true_speed = root_player.GetComponent<Rigidbody>().velocity;
+    }
+
+    private void UpdateStun()
+    {
+        stun_time -= Time.deltaTime * ScriptGlobalVariables.game_speed;
+        if (stun_time < 0) stun_time = 0;
     }
 
     public void CameraStabilization()

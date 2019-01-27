@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114098144329077164}
   - component: {fileID: 114952640533628688}
   - component: {fileID: 114108268460768322}
+  - component: {fileID: 114338606694820650}
   - component: {fileID: 65613318128673610}
   m_Layer: 0
   m_Name: Main Collision Box
@@ -122,7 +123,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1654064538760986}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_Children: []
@@ -326,6 +327,17 @@ MonoBehaviour:
   max_stamina_value: 100
   stamina_decay: 0.01
   partial_stamina_recovery: 0
+--- !u!114 &114338606694820650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654064538760986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63fb906e15169d4d86998450133ca68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114395158292003666
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -58,7 +58,6 @@ public class ScriptSpawningHarpoon : MonoBehaviour {
         new_harpoon = Instantiate(harpoon, the_parent.transform);
 
         float angle = GenerateAngle();
-        Debug.Log(angle);
 
         Vector3 new_position = transform.position;
 
