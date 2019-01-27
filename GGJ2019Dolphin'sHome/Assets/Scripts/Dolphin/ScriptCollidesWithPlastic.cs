@@ -12,6 +12,8 @@ public class ScriptCollidesWithPlastic : MonoBehaviour {
 
             dolphin_stamina.actual_stamina_value -= other.GetComponentInChildren<ScriptPlasticDamage>().plastic_damage;
             dolphin_stamina.max_stamina_value -= other.GetComponentInChildren<ScriptPlasticDamage>().plastic_damage;
+
+            Destroy(other.gameObject);
         }
 
 
