@@ -20,8 +20,8 @@ public class ScriptSpawningFishes : MonoBehaviour {
         float x, y;
         for (int i = 0; i < number_of_spinning_fishes; i++)
         {
-            x = Random.Range(minimum_x, maximum_x);
-            y = Random.Range(minimum_y, maximum_y);
+            x = Random.Range(transform.position.x - minimum_x, transform.position.x + maximum_x);
+            y = Random.Range(transform.position.x - minimum_y, transform.position.x + maximum_y);
             GameObject spinning_fish = Instantiate(original_spinning_fish, middleground.transform);
             Vector3 vector = spinning_fish.transform.position;
             vector.x = x;
@@ -31,8 +31,8 @@ public class ScriptSpawningFishes : MonoBehaviour {
 
         for (int i = 0; i < number_of_straight_fishes; i++)
         {
-            x = Random.Range(minimum_x, maximum_x);
-            y = Random.Range(minimum_y, maximum_y);
+            x = Random.Range(transform.position.x - minimum_x, transform.position.x + maximum_x);
+            y = Random.Range(transform.position.x - minimum_y, transform.position.x + maximum_y);
             GameObject straight_fish = Instantiate(original_straight_fish, middleground.transform);
             Vector3 vector = straight_fish.transform.position;
             vector.x = x;
