@@ -6,6 +6,45 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Logos.unity
+    guid: acc4ad3ef077c934c9c1a7b525b25cda
+  - enabled: 1
+    path: "Assets/Scenes/Introdu\xE7\xE3o.unity"
+    guid: e01ae8b6b8220a449b1b7e7ab68cadb7
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: ba77aa0d0ea0fe44aa6c12509d4881c9
+  - enabled: 1
+    path: Assets/Scenes/Fase 1.unity
+    guid: 11a120b7a0ce50a419dbac30b4343fd8
+  - enabled: 1
+    path: Assets/Scenes/ConversaSobreLar1.unity
+    guid: fc7560cf5bd097747bb3e0923c96c6a8
+  - enabled: 1
+    path: Assets/Scenes/Fase 2.unity
+    guid: 0f931d688dcfd50458794955f6840f5e
+  - enabled: 1
+    path: Assets/Scenes/ConversaSobreLar2.unity
+    guid: cbbe336eae9aff646afbe4d650974313
+  - enabled: 1
+    path: Assets/Scenes/Fase 3.unity
+    guid: f3155bdd662e28847a85c7322d7a0dbe
+  - enabled: 1
+    path: Assets/Scenes/ConversaSobreLar3.unity
+    guid: 4804a90dbd34d2d47ae645b790da3197
+  - enabled: 1
+    path: "Assets/Scenes/Conclus\xE3o.unity"
+    guid: 53f7b7cb2ced27943b54ae5f04814bfe
+  - enabled: 1
+    path: "Assets/Scenes/Cr\xE9ditos.unity"
+    guid: 2c0643e086c3c7147ac58b82af6536c0
+  - enabled: 0
+    path: Assets/Scenes/Ending.unity
+    guid: 572e27a54d0c13a46a428ed479f06ef9
+  - enabled: 0
     path: Assets/Scenes/Main Habitat.unity
     guid: cccc88dcecdf6f34dbc1a14a1caafb0f
+  - enabled: 0
+    path: Assets/Scenes/Opening.unity
+    guid: c7aeecaebd11c0a4f8f945795b64f82a
   m_configObjects: {}

@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 4695026429712030}
   - component: {fileID: 33594163405888650}
   - component: {fileID: 135740090330108472}
+  - component: {fileID: 114966069700264464}
   - component: {fileID: 114351528030821752}
   m_Layer: 0
   m_Name: Collision Sphere
@@ -682,7 +683,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292582245396364}
   m_LocalRotation: {x: 0.42261827, y: 0.9063079, z: 0, w: 0}
-  m_LocalPosition: {x: 7.4, y: 1.45, z: 0}
+  m_LocalPosition: {x: -54.3, y: -232.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4355722539030600}
@@ -1121,6 +1122,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789b53ea620b93345b02b6751c1cc16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114966069700264464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581652192359642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd8ee170c901fe4ba901c417c97d063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  communication_image: {fileID: 0}
 --- !u!135 &135178036097562038
 SphereCollider:
   m_ObjectHideFlags: 1
