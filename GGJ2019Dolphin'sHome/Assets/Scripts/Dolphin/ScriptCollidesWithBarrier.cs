@@ -15,10 +15,13 @@ public class ScriptCollidesWithBarrier : MonoBehaviour {
 
             sons_do_boto[qual_som].GetComponent<AudioSource>().Play();
 
-            Instantiate(communication_image, transform.parent);
+            GameObject imagem = Instantiate(communication_image);
 
+            Vector3 posicao = other.gameObject.transform.position;
 
-            //Spawnar imagem que dura 8 segundos.
+            posicao.y += 16;
+
+            imagem.transform.position = posicao;
         }
     }
 

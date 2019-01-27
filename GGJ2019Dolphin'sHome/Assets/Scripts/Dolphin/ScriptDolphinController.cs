@@ -20,15 +20,23 @@ public class ScriptDolphinController : MonoBehaviour {
 
     void ChooseAnimation()
     {
-        if (dolphin_movement.stun_time > 0)
+        if (dolphin_movement != null)
         {
-            GetComponent<Animator>().ResetTrigger("MudarParaSituaçãoNormal");
-            GetComponent<Animator>().SetTrigger("MudarParaTravado");
+            if (dolphin_movement.stun_time > 0)
+            {
+                GetComponent<Animator>().ResetTrigger("MudarParaSituaçãoNormal");
+                GetComponent<Animator>().SetTrigger("MudarParaTravado");
+            }
+            else
+            {
+                GetComponent<Animator>().ResetTrigger("MudarParaTravado");
+                GetComponent<Animator>().SetTrigger("MudarParaSituaçãoNormal");
+            }
         }
         else
         {
-            GetComponent<Animator>().ResetTrigger("MudarParaTravado");
             GetComponent<Animator>().SetTrigger("MudarParaSituaçãoNormal");
         }
+
     }
 }
