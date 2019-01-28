@@ -14,8 +14,10 @@ public class ScriptCloseTheGameAfter14Seconds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        AddToCounter();
+        TimeToCloseTheGame();
+
+    }
     
     void AddToCounter()
     {
