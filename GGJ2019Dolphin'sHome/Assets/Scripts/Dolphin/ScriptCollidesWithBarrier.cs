@@ -11,7 +11,7 @@ public class ScriptCollidesWithBarrier : MonoBehaviour {
     {
         if (other.GetComponent<TagBarrier>())
         {
-            int qual_som = (int)Random.Range(0, 3);
+            int qual_som = (int)Random.Range(0, sons_do_boto.Length);
 
             sons_do_boto[qual_som].GetComponent<AudioSource>().Play();
 
