@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619343acca4858b41972ce4de16400dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish_nutritional_value: 5
+  fish_nutritional_value: 3
 --- !u!135 &135504309815222160
 SphereCollider:
   m_ObjectHideFlags: 1

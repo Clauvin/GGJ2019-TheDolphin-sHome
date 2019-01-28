@@ -156,13 +156,13 @@ MonoBehaviour:
   middleground: {fileID: 1619140892}
   original_spinning_fish: {fileID: 1323311354323928, guid: 49ae5b6b997dae944a7931a269421c95,
     type: 2}
-  number_of_spinning_fishes: 200
+  number_of_spinning_fishes: 400
   original_straight_fish: {fileID: 1437378881195726, guid: 474a4bbdae1c0bf449c1c4a33002b574,
     type: 2}
-  number_of_straight_fishes: 200
+  number_of_straight_fishes: 400
   minimum_x: 50
   maximum_x: 50
-  minimum_y: 100
+  minimum_y: 150
   maximum_y: 100
 --- !u!1 &58741056
 GameObject:
@@ -1778,6 +1778,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 459379373}
   m_Mesh: {fileID: 4300026, guid: 1fe55f4bee7ab964e9f259d38ca99480, type: 3}
+--- !u!1 &502482968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1763980309875624, guid: c56e1185a856d454c81f01a2fe44c468,
+    type: 2}
+  m_PrefabInternal: {fileID: 1353809218}
 --- !u!1 &511602628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,18 +3996,22 @@ Prefab:
         type: 2}
       propertyPath: sons_do_boto.Array.data[0]
       value: 
-      objectReference: {fileID: 1440724951}
+      objectReference: {fileID: 502482968}
     - target: {fileID: 114231462643727630, guid: c56e1185a856d454c81f01a2fe44c468,
         type: 2}
       propertyPath: sons_do_boto.Array.data[1]
       value: 
-      objectReference: {fileID: 511602628}
+      objectReference: {fileID: 1576809194}
     - target: {fileID: 114231462643727630, guid: c56e1185a856d454c81f01a2fe44c468,
         type: 2}
       propertyPath: sons_do_boto.Array.data[2]
       value: 
-      objectReference: {fileID: 157282618}
-    m_RemovedComponents: []
+      objectReference: {fileID: 1997265922}
+    m_RemovedComponents:
+    - {fileID: 65056789390133034, guid: c56e1185a856d454c81f01a2fe44c468, type: 2}
+    - {fileID: 65188548405495418, guid: c56e1185a856d454c81f01a2fe44c468, type: 2}
+    - {fileID: 65590167572878126, guid: c56e1185a856d454c81f01a2fe44c468, type: 2}
+    - {fileID: 114512553951477794, guid: c56e1185a856d454c81f01a2fe44c468, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: c56e1185a856d454c81f01a2fe44c468, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1359896594
@@ -4913,6 +4922,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557003115}
   m_Mesh: {fileID: 4300000, guid: 1fe55f4bee7ab964e9f259d38ca99480, type: 3}
+--- !u!1 &1576809194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884102912944302, guid: c56e1185a856d454c81f01a2fe44c468,
+    type: 2}
+  m_PrefabInternal: {fileID: 1353809218}
 --- !u!4 &1610262078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4606441921702774, guid: 2110fc8730ab7894fb5d4581f8ce59b9,
@@ -6034,6 +6048,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255488175269284, guid: 93568f1239c3ab94bbe7b8298e44c8a3,
     type: 2}
   m_PrefabInternal: {fileID: 2130527003}
+--- !u!1 &1997265922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1635582640747884, guid: c56e1185a856d454c81f01a2fe44c468,
+    type: 2}
+  m_PrefabInternal: {fileID: 1353809218}
 --- !u!1 &2014737024
 GameObject:
   m_ObjectHideFlags: 0
