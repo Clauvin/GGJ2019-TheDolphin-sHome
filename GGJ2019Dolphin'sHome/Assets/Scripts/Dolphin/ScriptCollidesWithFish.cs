@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScriptCollidesWithFish : MonoBehaviour {
 
+    public GameObject mordida;
+
     private void OnTriggerEnter(Collider other)
     {
         if ((other.GetComponentInChildren<TagFish>()) && (ScriptGlobalVariables.player.
@@ -15,6 +17,8 @@ public class ScriptCollidesWithFish : MonoBehaviour {
             GameObject root_fish = other.transform.parent.gameObject;
 
             ScriptFishNutritionalValue nutritional_value = root_fish.GetComponentInChildren<ScriptFishNutritionalValue>();
+
+            mordida.GetComponent<AudioSource>().Play();
 
             dolphin_stomach.AteStuff(nutritional_value.fish_nutritional_value);
 
