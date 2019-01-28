@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Game Scenes/Logos.unity
-    guid: acc4ad3ef077c934c9c1a7b525b25cda
   - enabled: 1
     path: "Assets/Game Scenes/Introdu\xE7\xE3o.unity"
     guid: e01ae8b6b8220a449b1b7e7ab68cadb7
@@ -33,21 +30,6 @@ EditorBuildSettings:
     path: Assets/Game Scenes/ConversaSobreLar3.unity
     guid: 4804a90dbd34d2d47ae645b790da3197
   - enabled: 1
-    path: "Assets/Scenes/Conclus\xE3o.unity"
+    path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: "Assets/Game Scenes/Cr\xE9ditos.unity"
-    guid: 2c0643e086c3c7147ac58b82af6536c0
-  - enabled: 0
-    path: "Assets/Game Scenes/Conclus\xE3o.unity"
-    guid: 53f7b7cb2ced27943b54ae5f04814bfe
-  - enabled: 0
-    path: Assets/Game Scenes/Ending.unity
-    guid: 572e27a54d0c13a46a428ed479f06ef9
-  - enabled: 0
-    path: Assets/Game Scenes/Main Habitat.unity
-    guid: cccc88dcecdf6f34dbc1a14a1caafb0f
-  - enabled: 0
-    path: Assets/Game Scenes/Opening.unity
-    guid: c7aeecaebd11c0a4f8f945795b64f82a
   m_configObjects: {}

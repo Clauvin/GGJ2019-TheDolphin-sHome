@@ -9,7 +9,7 @@ public class ScriptIfFullJumpToEnding : MonoBehaviour {
         if (GetComponent<ScriptDolphinStomach>().max_stomach_limit ==
                 GetComponent<ScriptDolphinStomach>().how_much_filled)
         {
-            SceneManager.LoadScene.LoadConclusão();
+            SceneManager.LoadScene.LoadCréditos();
         }
     }
 }

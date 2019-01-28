@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114093171001820010}
   - component: {fileID: 114128541948660304}
   - component: {fileID: 114374642226690372}
-  - component: {fileID: 114311582108519142}
   - component: {fileID: 114214554113064450}
   m_Layer: 0
   m_Name: Capsule
@@ -157,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0358a143ee1ba942abb6ba9f59f181f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stun_value: 5
+  stun_value: 3
 --- !u!114 &114214554113064450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,18 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a01fa70c2570fe439fbdaba965ccf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114311582108519142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1430804342995120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0358a143ee1ba942abb6ba9f59f181f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stun_value: 5
 --- !u!114 &114374642226690372
 MonoBehaviour:
   m_ObjectHideFlags: 1
