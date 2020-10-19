@@ -28,7 +28,7 @@ public class ScriptCloseTheGameAfter14Seconds : MonoBehaviour {
     {
         if (counter >= time_to_end_the_game)
         {
-            SceneManager.LoadScene.CloseGame();
+            SceneManager.CloseGame();
         }
     }
 }

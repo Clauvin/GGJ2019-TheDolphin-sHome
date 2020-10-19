@@ -22,7 +22,7 @@ public class ScriptIfTimePassedGoToStage2 : MonoBehaviour {
     {
         if (counter >= time_to_jump)
         {
-            SceneManager.LoadScene.LoadFase2();
+            SceneManager.LoadFase2();
         }
     }
 }

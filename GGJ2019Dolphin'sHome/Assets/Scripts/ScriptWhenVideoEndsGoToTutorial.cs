@@ -15,7 +15,7 @@ public class ScriptWhenVideoEndsGoToTutorial : MonoBehaviour {
 	void Update () {
 		if (!GetComponent<VideoPlayer>().isPlaying)
         {
-            SceneManager.LoadScene.LoadTutorial();
+            SceneManager.LoadTutorial();
         }
 	}
 }

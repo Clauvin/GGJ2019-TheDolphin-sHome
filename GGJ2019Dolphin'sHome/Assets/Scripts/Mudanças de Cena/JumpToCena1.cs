@@ -6,7 +6,7 @@ public class JumpToCena1 : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene.LoadFase1();
+        SceneManager.LoadFase1();
     }
 
     // Use this for initialization
