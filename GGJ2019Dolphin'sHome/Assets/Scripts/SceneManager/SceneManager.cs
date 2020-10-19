@@ -6,32 +6,27 @@ public class SceneManager : MonoBehaviour {
 
     public static void LoadConversaSobreLar1()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName("ConversaSobreLar1").name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
     public static void LoadCréditos()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName("Créditos").name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(8, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
     public static void LoadTutorial()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName("Load Tutorial").name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
     public static void LoadFase1()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName("Fase 1").name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
     public static void LoadFase2()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName("Fase 2").name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
     public static void CloseGame()
