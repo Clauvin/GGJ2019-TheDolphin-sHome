@@ -9,7 +9,7 @@ public class ScriptIfFullJumpToConversa1 : MonoBehaviour {
 		if (GetComponent<ScriptDolphinStomach>().max_stomach_limit ==
                 GetComponent<ScriptDolphinStomach>().how_much_filled)
         {
-            SceneManager.LoadScene.LoadConversaSobreLar1();
+            SceneManager.LoadConversaSobreLar1();
         }
     }
 }

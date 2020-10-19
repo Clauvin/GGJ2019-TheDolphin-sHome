@@ -43,7 +43,7 @@ public class ScriptDolphinStamina : MonoBehaviour {
     {
         if (actual_stamina_value <= 0.0f)
         {
-            SceneManager.LoadScene.ResetScene();
+            SceneManager.ResetScene();
         }
     }
 
