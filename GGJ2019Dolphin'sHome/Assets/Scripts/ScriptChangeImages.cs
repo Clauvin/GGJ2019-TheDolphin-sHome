@@ -11,7 +11,6 @@ public class ScriptChangeImages : MonoBehaviour {
     public float[] tempo_de_transicoes;
     public float tempo_que_passou;
     public float tempo_para_pular_pra_proxima_cena;
-    public SceneManager.Cenas proxima_cena;
 
 	// Use this for initialization
 	void Start () {
