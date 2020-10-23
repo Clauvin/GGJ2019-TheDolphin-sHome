@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1484,22 +1484,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93568f1239c3ab94bbe7b8298e44c8a3, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &296028675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1895281881500298, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1713992871}
---- !u!114 &296028677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 296028675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c42f635eebaff24392130a46c09acd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &328153385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,6 +2111,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4145453017822616, guid: c56e1185a856d454c81f01a2fe44c468,
     type: 2}
   m_PrefabInternal: {fileID: 560260895}
+--- !u!1 &531464349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531464350}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531464350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531464349}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -87.95, y: -150.67, z: -105.375145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,8 +2172,8 @@ Camera:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.027901383, g: 0.14008814, b: 0.31132078, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -2265,6 +2277,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56e1185a856d454c81f01a2fe44c468, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &560260896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1967158645181904, guid: c56e1185a856d454c81f01a2fe44c468,
+    type: 2}
+  m_PrefabInternal: {fileID: 560260895}
+--- !u!114 &560260897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560260896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02fa17f060cebd74a89873ca091d8cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &611479940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,38 +5576,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1895281881500298, guid: bf6eb79cd3702714bb1f9537ed89c08b, type: 2}
-      propertyPath: m_Name
-      value: Comida
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.5096024
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.4198113
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0de69219456f8c74abf2fe1bcfd043ff,
-        type: 3}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114318686407943514, guid: bf6eb79cd3702714bb1f9537ed89c08b, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6eb79cd3702714bb1f9537ed89c08b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1768626809
