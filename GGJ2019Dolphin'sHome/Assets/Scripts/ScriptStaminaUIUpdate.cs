@@ -6,8 +6,13 @@ public class ScriptStaminaUIUpdate : MonoBehaviour {
 
     ScriptDolphinStamina dolphin_stamina;
 
-	// Use this for initialization
-	void Start () {
+    void Awake()
+    {
+        
+    }
+
+    // Use this for initialization
+    void Start () {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         dolphin_stamina = player.GetComponentInChildren<ScriptDolphinStamina>();
 
