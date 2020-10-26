@@ -1341,22 +1341,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93568f1239c3ab94bbe7b8298e44c8a3, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &296028675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1895281881500298, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1713992871}
---- !u!114 &296028677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 296028675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c42f635eebaff24392130a46c09acd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &328153385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,43 +5292,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1895281881500298, guid: bf6eb79cd3702714bb1f9537ed89c08b, type: 2}
-      propertyPath: m_Name
-      value: Comida
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.9811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.50445
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.50445
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0de69219456f8c74abf2fe1bcfd043ff,
-        type: 3}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729104849088326, guid: bf6eb79cd3702714bb1f9537ed89c08b,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114318686407943514, guid: bf6eb79cd3702714bb1f9537ed89c08b, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6eb79cd3702714bb1f9537ed89c08b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1768626809
