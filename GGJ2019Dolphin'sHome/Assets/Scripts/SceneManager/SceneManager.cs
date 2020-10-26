@@ -41,7 +41,7 @@ public class SceneManager : MonoBehaviour {
 
     public static void LoadCréditos()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(10, UnityEngine.SceneManagement.LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(11, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
     
     public static void CloseGame()
