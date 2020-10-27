@@ -9,6 +9,7 @@ public class ScriptMainScreen : MonoBehaviour {
 
 		Camera camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         RectTransform rect_transform = GetComponent<RectTransform>();
+        ScriptFixedRatio fixed_ratio = camera.GetComponent<ScriptFixedRatio>();
         float x = Screen.width; float y = Screen.height;
         float x_adjustment = Screen.width / (rect_transform.rect.width);
         float y_adjustment = Screen.height / (rect_transform.rect.height);
