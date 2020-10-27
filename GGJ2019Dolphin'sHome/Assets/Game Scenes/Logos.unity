@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367dcd212f3caf549b754eee54db338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_for_alpha_to_become_255: 3
-  time_for_alpha_to_be_255: 5
+  time_for_alpha_to_become_255: 2
+  time_for_alpha_to_be_255: 4
   time_for_alpha_to_become_0: 2
 --- !u!1 &1244973426
 GameObject:
@@ -435,8 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367dcd212f3caf549b754eee54db338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_for_alpha_to_become_255: 3
-  time_for_alpha_to_be_255: 5
+  time_for_alpha_to_become_255: 2
+  time_for_alpha_to_be_255: 4
   time_for_alpha_to_become_0: 2
 --- !u!1 &1314477609
 GameObject:
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  time_to_jump: 11
+  time_to_jump: 9
 --- !u!4 &1314477611
 Transform:
   m_ObjectHideFlags: 0
