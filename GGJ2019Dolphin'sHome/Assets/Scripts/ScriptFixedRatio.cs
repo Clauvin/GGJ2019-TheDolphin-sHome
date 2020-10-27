@@ -11,8 +11,14 @@ public class ScriptFixedRatio : MonoBehaviour
     public float x_resolution_target = 1366.0f;
     public float y_resolution_target = 768.0f;
 
-    // Use this for initialization
-    void Start()
+    private float scaleheight = 0f;
+
+    public float getScaleHeight()
+    {
+        return scaleheight;
+    }
+
+    void Awake()
     {
         // set the desired aspect ratio (the values in this example are
         // hard-coded for 16:9, but you could make them into public
@@ -23,8 +29,12 @@ public class ScriptFixedRatio : MonoBehaviour
         float windowaspect = (float)Screen.width / (float)Screen.height;
 
         // current viewport height should be scaled by this amount
-        float scaleheight = windowaspect / targetaspect;
+        scaleheight = windowaspect / targetaspect;
+    }
 
+    // Use this for initialization
+    void Start()
+    {
         // obtain camera component so we can modify its viewport
         Camera camera = GetComponent<Camera>();
 
