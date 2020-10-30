@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 222715078850050364}
   - component: {fileID: 114729104849088326}
   - component: {fileID: 114939167470169736}
-  - component: {fileID: 114570670848090326}
   m_Layer: 5
   m_Name: Comida
   m_TagString: Untagged
@@ -130,18 +129,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114570670848090326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1895281881500298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c42f635eebaff24392130a46c09acd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gambiarra: 1
 --- !u!114 &114603704365140438
 MonoBehaviour:
   m_ObjectHideFlags: 1
